@@ -13,7 +13,7 @@ import mysql.connector as msc
 bank_database = msc.connect(
     host= "localhost",
     user= "root",
-    password= "******@123"  #enter your benchwork password
+    password= "******@123"  #enter your workbench password
 )
 
 cursor = bank_database.cursor()
