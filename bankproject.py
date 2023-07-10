@@ -13,7 +13,7 @@ import mysql.connector as msc
 bank_database = msc.connect(
     host= "localhost",
     user= "root",
-    password= "SireshM@123"
+    password= "******@123"  #enter your benchwork password
 )
 
 cursor = bank_database.cursor()
@@ -39,8 +39,9 @@ class bank():
         if self.operation == 1:
 
                 account_type = input("select the account type (sb for savings or ca for current):")
-                number = cursor.execute("SELECT * FROM CUSTOMER ORDER BY ACCOUNTNUMBER DESC LIMIT 1")    #to fetch the last account number from database
-                account_number = cursor.fetchone()[0]
+                account_number = 10000  #account number should be assigned to any number and comment the below lines for first time execution, then on comment this line and uncomment the below lines.
+                #number = cursor.execute("SELECT * FROM CUSTOMER ORDER BY ACCOUNTNUMBER DESC LIMIT 1")    #to fetch the last account number from database
+                #account_number = cursor.fetchone()[0]
                 account_number+=1   #increment the account number to get consecutive number
                 balance = 0 
                 
