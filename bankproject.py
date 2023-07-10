@@ -19,12 +19,12 @@ bank_database = msc.connect(
 cursor = bank_database.cursor()
 
 ''' creating the database. once you create a database, comment the line to run a program for next time.'''
-# cursor.execute("CREATE DATABASE BANKDATA")
+cursor.execute("CREATE DATABASE BANKDATA")
 
 cursor.execute("USE BANKDATA")
 ''' creating the table. once you create a table, comment the line to run a program for next time.'''
-# create_data = "CREATE TABLE CUSTOMER (ACCOUNTNUMBER INT AUTO_INCREMENT, ACCOUNTTYPE VARCHAR(30), NAME VARCHAR(200), BALANCE INT, MOBILE INT, GENDER VARCHAR(50), PRIMARY KEY(ACCOUNTNUMBER))"
-# cursor.execute(create_data)
+create_data = "CREATE TABLE CUSTOMER (ACCOUNTNUMBER INT AUTO_INCREMENT, ACCOUNTTYPE VARCHAR(30), NAME VARCHAR(200), BALANCE INT, MOBILE INT, GENDER VARCHAR(50), PRIMARY KEY(ACCOUNTNUMBER))"
+cursor.execute(create_data)
 
 print("-"*60)
 print("*"*10,"Welcome to Smart Bank-Your Bank Your Choice","*"*10)
